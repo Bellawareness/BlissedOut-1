@@ -9,4 +9,18 @@ body{
 	background: #82C7D6;
 	box-shadow:  20px 20px 60px #6fa9b6,
              -20px -20px 60px #96e5f6;
+	    margin-bottom: 20px;
+
+}
+
+h1{
+	color: #F9F871;
+	Font-family: Baskerville, Baskerville Old Face, Garamond, 								Times New Roman, serif;
+	font-style: italic;
+}
+
+h3{
+	color: #C1F78D;
+	Font-family: Baskerville, Baskerville Old Face, Garamond, 								Times New Roman, serif;
+
 }
