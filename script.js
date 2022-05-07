@@ -1,5 +1,35 @@
-// document.addEventListener("DOMContentLoaded", function() {
-  // code...
+document.addEventListener("DOMContentLoaded", function() {
+
+//created a function to create a button
+function moreInfo() {
+  //call the prompt again
+let number = prompt ("Choose a decimal");
+//log the result to the console 
+console.log(Math.round(number));
+
+}
+
+
+//add the function to the button 
+document.getElementById("myBtn").onclick = Roundup;
+
+//code to take log answers to html 
+(function () {
+    var old = console.log;
+    var logger = document.getElementById('log');
+    console.log = function () {
+      for (var i = 0; i < arguments.length; i++) {
+        if (typeof arguments[i] == 'object') {
+            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(arguments[i], undefined, 2) : arguments[i]) + '<br />';
+        } else {
+      logger.innerHTML += arguments[i] + '<br />';
+        }
+      }
+    }
+})();
+
+
+  // tried to add resolve bug...
 
 const submit = document.querySelector('.comment-submit');
 const commentList = document.querySelector('.comments');
@@ -27,13 +57,6 @@ function appendComment (event) {
   };
 
 
-
-
-
-
-
-
-
   event.preventDefault();
   // If the value is nothing just return
   if (commentInput.value.length < 1) return;
@@ -57,3 +80,7 @@ const saved = localStorage.getItem('commentListing');
 if (saved) {
   commentList.innerHTML = saved;
 }
+
+
+
+ });

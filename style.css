@@ -3,6 +3,9 @@ body{
     margin: 0px;
 }
 
+nav{
+		background-color: #95B0B7;
+}
 
 .card{
 	border-radius: 50px;
