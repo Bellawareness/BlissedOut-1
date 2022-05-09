@@ -1,34 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-
-//created a function to create a button
-function moreInfo() {
-  //call the prompt again
-let number = prompt ("Choose a decimal");
-//log the result to the console 
-console.log(Math.round(number));
-
-}
-
-
-//add the function to the button 
-document.getElementById("myBtn").onclick = Roundup;
-
-//code to take log answers to html 
-(function () {
-    var old = console.log;
-    var logger = document.getElementById('log');
-    console.log = function () {
-      for (var i = 0; i < arguments.length; i++) {
-        if (typeof arguments[i] == 'object') {
-            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(arguments[i], undefined, 2) : arguments[i]) + '<br />';
-        } else {
-      logger.innerHTML += arguments[i] + '<br />';
-        }
-      }
-    }
-})();
-
-
+// document.addEventListener("DOMContentLoaded", function() {
   // tried to add resolve bug...
 
 const submit = document.querySelector('.comment-submit');
@@ -80,7 +50,74 @@ const saved = localStorage.getItem('commentListing');
 if (saved) {
   commentList.innerHTML = saved;
 }
+// Commment box
+ // });
+
+// Intro to joymometer 
+function printname(){
+  var giveName = document.getElementById("name").value;
+  document.getElementById("printHello").innerHTML = "Hello " + giveName + " I am Elly and we are going to take account of your happiness by calculating your weekly, monthly and yearly personal happiness barometer ust answer a few questions as often as you can with as much detail as you want. Let us begin!";
+};
 
 
+const
+  range = document.getElementById('range'),
+  rangeV = document.getElementById('rangeV'),
+  setValue = ()=>{
+    const
+      newValue = Number( (range.value - range.min) * 100 / (range.max - range.min) ),
+      newPosition = 10 - (newValue * 0.2);
+    rangeV.innerHTML = `<span>${range.value}</span>`;
+    rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+  };
+document.addEventListener("DOMContentLoaded", setValue);
+range.addEventListener('input', setValue);
 
- });
+
+const allRanges = document.querySelectorAll(".range-wrap");
+allRanges.forEach(wrap => {
+  const range = wrap.querySelector(".range");
+  const bubble = wrap.querySelector(".bubble");
+
+  range.addEventListener("input", () => {
+    setBubble(range, bubble);
+  });
+  setBubble(range, bubble);
+});
+
+function setBubble(range, bubble) {
+  const val = range.value;
+  const min = range.min ? range.min : 0;
+  const max = range.max ? range.max : 100;
+  const newVal = Number(((val - min) * 100) / (max - min));
+  bubble.innerHTML = val;
+
+  // Sorta magic numbers based on size of the native UI thumb
+  bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
+};
+
+function getValue() {
+var t = document.getElementById("range").value;
+document.getElementById("Sample").innerHTML = ""+ t;
+
+		switch(t) {
+
+	case 1: System.out.println("You are enough");
+		break;
+
+	case 2: System.out.println("You can be joyful right now");
+	break;
+
+	case 3: System.out.println("Enjoy the process");
+
+	case 4: System.out.println("Being alive is the joy");
+
+	default: System.out.println("You are a great manager");
+
+	case 5: System.out.println("You are loved beyond measures");
+	break;
+
+	case 6:System.out.println("You are worthy of being here");
+	break;
+		}
+};

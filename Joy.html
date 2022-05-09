@@ -1,107 +1,148 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Bootstrap CSS -->
-		  <link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="joy.css">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-	  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Blissed Out</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<title>Blissed Out</title>
 </head>
-
-<MARQUEE DIRECTION="down" BEHAVIOR="alternate" STYLE="width:100%; height:80px"class= "marquee">
-<MARQUEE BEHAVIOR="alternate">Love, Joy, Bliss</MARQUEE>
-</MARQUEE>
 
 
 
 
 
 <body>
-  <!-- Navbar Component -->
-  <nav class="navbar navbar-expand-lg navbar-light  ">
-    <a class="navbar-brand" href="index.html"> <img src= "Images/lotus.png" alt="logo"> </a>
+	<!-- Navbar Component -->
+	<nav class="navbar navbar-expand-lg navbar-light  ">
+		<a class="navbar-brand" href="index.html"> <img src="Images/lotus.png" alt="logo"> </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
- <span class="navbar-toggler-icon"></span>
-    </button>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-      
-        <li class="nav-item">
- <a class="nav-link" href="Joy.html">JoyMometer</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="Goal.html">Goal Tracker</a>
-           </li>
-            <li class="nav-item">
-          <a class="nav-link" href="Solve.html">Solve Problems</a>
-        </li>
-				   <li class="nav-item">
-          <a class="nav-link" href="About.html">About Us</a>
-        </li>
-        </ul>
-     </div>
-</nav>
-	
-  <!-- Jumbotron -->
-  <div class= "jumbotron jumbotron-fluid" style="background:url(Images/blue.jpg) no-repeat; background-size: cover;" >
-     <div class="p-3 mb-2 bg-transparent text-white my-5 text-center">
-       <h1 class= "display-4">Blissed Out</h1>
-       <p >Managing oursevles and our world</p>
-  </div>
-  </div>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+
+				<li class="nav-item">
+					<a class="nav-link" href="Joy.html">JoyMometer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Goal.html">Goal Tracker</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Solve.html">Solve Problems</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="About.html">About Us</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Jumbotron -->
+<!-- 	<div class="jumbotron jumbotron-fluid" style="background:url(Images/blue.jpg) no-repeat; background-size: cover;">
+		<div class="p-3 mb-2 bg-transparent text-white my-5 text-center">
+			<h1 class="display-4">Blissed Out</h1>
+			<p>Managing oursevles and our world</p>
+		</div>
+	</div> -->
+
+	<div class="main">
 
 
+		<label> What would you like to be called ? </label>
+		<input type=" Name" name="name" id="name" value=" Name">
+		<button type="button" name="button" onclick="printname()">Click here</button>
+		<label id="printHello"></label>
 
-    <div class= "container">
-          <h1> Keep account of your moments of joy </h1>
-    <div class= "container1">
 
-          <div class= "row">
-    <button type="button" id="myBtn">Click Me</button>
-   </div>
-
-                      <div class= "row1">
-    <pre id="log"></pre>
-</div>
-         </div>
-
-   </div>
- 
+		<!-- 	figure how to hide this until after  -->
+		<label> What was a moment of joy for you today? </label>
 
 
 
+		<textarea id="moment" name="moment" rows="4" cols="50" type=" moment" value=" moment"> Share a moment of joy, big or small. Something that made you smile or your heart flutter.
+
+	 </textarea>
+		<br>
+		<input type="submit" value="Submit">
 
 
+		<div class="range-wrap">How would you rate your level of joy today?
 
-
-
-
-
-
-
-	
+			<input id="range" type="range" min="1" max="10" value="10" step="1">
+		</div>
+<button onclick="getValue()">Save Rating </button>
 		
+<p id="Sample"></p>
+<!-- the number is not showing up of the range  -->
+
+	</div>
 
 
-  <!-- Footer -->
-  <footer class= "text-center">Blissed Out 2022 &copy;</footer>
 
-  <!-- Bootstrap's JavaScript Files -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-</body>
+	<!-- 
+	How would you rate your level of joy Today?
+1 - so sad 
+	2. blue
+	3.nonchalant
+4- ok
+5 - Happy 
+6- very happy 
+7- ecstatic 
+8- overjoyed 
+9- blissed out 
+	10- whats higher than this?
 
-</html>
+	//based on the answer share an encouraging message 
 
 	
-  <script src="script.js"></script>
+
+	store this information and be able to bring it back so the weeks and month rating can be shown an average how joyful you are
+
+
+	Ways to become better manager of 
+	body mind community self 
+
+	What have you done for your body 
+	
+	
+	? -->
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Footer -->
+	<footer class="text-center">Blissed Out 2022 &copy;</footer>
+
+	<!-- Bootstrap's JavaScript Files -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+		integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+		crossorigin="anonymous"></script>
+
+
+
+	<script src="script.js" defer></script>
 </body>
 
 </html>
